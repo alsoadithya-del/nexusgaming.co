@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#090d18" />
+  <meta name="description" content="NEXUS — your cloud gaming universe. Play solo, squad up, and keep every win in sync." />
+  <title>NEXUS — Cloud Gaming Universe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#home" aria-label="NEXUS home">
+        <span class="brand-mark"><span></span><span></span><span></span></span>
+        <span class="brand-name">NEXUS<span class="brand-dot">.</span></span>
+      </a>
+      <div class="side-label">YOUR SPACE</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#home" data-nav="home"><span class="nav-icon">⌂</span> Discover</a>
+        <a class="nav-link" href="#library" data-nav="library"><span class="nav-icon">▦</span> Game library <span class="nav-count" id="libraryCount">06</span></a>
+        <a class="nav-link" href="#multiplayer" data-nav="multiplayer"><span class="nav-icon">♧</span> Multiplayer <span class="live-dot"></span></a>
+        <a class="nav-link" href="#profile" data-nav="profile"><span class="nav-icon">◉</span> My progress</a>
+      </nav>
+      <div class="side-divider"></div>
+      <div class="side-label">YOUR COLLECTION</div>
+      <div class="collection-list" id="collectionList">
+        <div class="collection-empty">Your favorites will appear here.</div>
+      </div>
+      <div class="sidebar-spacer"></div>
+      <div class="connection-card">
+        <div class="connection-top"><span class="signal-icon">⌁</span><span class="connection-status">ALL SYSTEMS GO</span><span class="pulse"></span></div>
+        <div class="connection-title">Cloud connection</div>
+        <div class="connection-sub">Ready for your next session</div>
+        <div class="connection-meter"><span></span></div>
+        <div class="connection-foot"><span>Network status</span><strong>Stable</strong></div>
+      </div>
+      <div class="sidebar-bottom"><span class="mini-avatar">N</span><span><b>NEXUS PRIME</b><small>Player-first gaming</small></span><span class="more-dots">···</span></div>
+    </aside>
+
+    <main class="main-content" id="home">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+        <div class="breadcrumb">NEXUS <span>/</span> <b id="breadcrumbCurrent">Discover</b></div>
+        <div class="topbar-actions">
+          <label class="search-wrap"><span>⌕</span><input id="globalSearch" type="search" placeholder="Find your next world..." autocomplete="off" /><kbd>⌘ K</kbd></label>
+          <button class="icon-button notification-button" id="notificationButton" aria-label="Notifications">♧<i></i></button>
+          <div class="top-divider"></div>
+          <button class="account-button" id="accountButton"><span class="account-avatar" id="accountAvatar">G</span><span class="account-copy"><b id="accountName">Guest player</b><small id="accountStatus">Save your progress</small></span><span class="chevron">⌄</span></button>
+        </div>
+      </header>
+
+      <section class="welcome-row" id="welcomeRow">
+        <div><div class="eyebrow"><span class="eyebrow-star">✦</span> YOUR NEXT ADVENTURE STARTS HERE</div><h1>Ready when <span>you are.</span></h1><p>Big worlds. Zero downloads. Your game, your pace. Always free to play.</p></div>
+        <div class="welcome-right"><div class="server-pill"><span class="pulse"></span> CLOUD SERVERS ONLINE</div><div class="welcome-time" id="welcomeDate">TUESDAY, NOVEMBER 10</div></div>
+      </section>
+
+      <div class="free-play-banner"><span class="free-play-icon">✦</span><div><b>100% FREE TO PLAY</b><small>No subscription · No entry fee · No pay-to-win upgrades</small></div><span class="free-play-check">✓ FREE</span></div>
+
+      <section class="hero-card" aria-label="Featured game">
+        <div class="hero-grid"></div>
+        <div class="hero-copy">
+          <div class="hero-kicker"><span class="new-tag">FEATURED DROP</span><span class="hero-category">ACTION · ADVENTURE</span></div>
+          <h2>THE EDGE<br/>OF <em>INFINITE.</em></h2>
+          <p>One forgotten planet. A thousand ways to survive. Your legend is waiting beyond the horizon.</p>
+          <div class="hero-meta"><span>◈ 4K READY</span><span>◉ SOLO & CO-OP</span><span>⌁ INSTANT PLAY</span></div>
+          <div class="hero-actions"><button class="primary-button" data-launch="riftbound"><span>▶</span> Play now <span class="button-arrow">↗</span></button><button class="secondary-button" data-details="riftbound">Explore game <span>→</span></button></div>
+          <div class="hero-bottom"><span class="hero-progress-label">YOUR JOURNEY <b id="heroProgress">0% COMPLETE</b></span><div class="hero-progress"><span id="heroProgressBar"></span></div></div>
+        </div>
+        <div class="hero-art" aria-hidden="true"><div class="hero-orbit orbit-a"></div><div class="hero-orbit orbit-b"></div><div class="hero-planet"><div class="planet-glow"></div><div class="planet-land"></div></div><div class="hero-moon"></div><div class="hero-star star-a">✦</div><div class="hero-star star-b">·</div><div class="hero-star star-c">✧</div><div class="hero-art-label">N° 001 <span>RIFTBOUND</span></div></div>
+        <div class="hero-index"><span>01</span><i></i><span>03</span></div>
+      </section>
+
+      <section class="stat-strip" id="statsStrip">
+        <div class="stat-item"><span class="stat-icon purple">◈</span><div><b id="statXp">0 XP</b><small>TOTAL EXPERIENCE</small></div></div>
+        <div class="stat-item"><span class="stat-icon aqua">◷</span><div><b id="statHours">0h</b><small>TIME IN WORLDS</small></div></div>
+        <div class="stat-item"><span class="stat-icon orange">✧</span><div><b id="statLevel">LEVEL 01</b><small>PLAYER RANK</small></div></div>
+        <div class="stat-item stat-streak"><span class="stat-icon pink">♨</span><div><b id="statStreak">0 DAY</b><small>PLAY STREAK</small></div><span class="streak-note">Keep it going!</span></div>
+      </section>
+
+      <section class="section-block" id="library">
+        <div class="section-heading"><div><div class="eyebrow">PICK YOUR PLAYSTYLE</div><h2>Find your <span>next world.</span></h2></div><a class="text-link" href="#all-games" id="viewAllGames">View all games <span>↗</span></a></div>
+        <div class="library-toolbar"><div class="mode-switch" role="tablist" aria-label="Game mode"><button class="mode-tab active" data-mode="all" role="tab" aria-selected="true">All games <span>06</span></button><button class="mode-tab" data-mode="solo" role="tab" aria-selected="false">◎ Solo</button><button class="mode-tab" data-mode="multi" role="tab" aria-selected="false">♧ Multiplayer <span class="tab-live"></span></button></div><div class="filter-wrap"><span>FILTER</span><select id="genreFilter" aria-label="Filter games by genre"><option value="all">All genres</option><option value="Action">Action</option><option value="Adventure">Adventure</option><option value="Racing">Racing</option><option value="Strategy">Strategy</option><option value="Sports">Sports</option></select><button class="sort-button" id="sortButton">↕ <span>Popular</span></button></div></div>
+        <div class="game-grid" id="gameGrid"></div>
+        <div class="no-results" id="noResults" hidden><span>◌</span><b>No worlds found</b><small>Try another search or genre.</small></div>
+      </section>
+
+      <section class="community-section" id="multiplayer">
+        <div class="community-copy"><div class="eyebrow"><span class="eyebrow-star">✦</span> BETTER TOGETHER</div><h2>Your squad.<br/><span>Your rules.</span></h2><p>Make a room, invite your crew, or jump into a lobby. The next great story is a co-op one.</p><div class="community-actions"><button class="primary-button" id="createRoomButton">＋ Create a room <span class="button-arrow">↗</span></button><button class="secondary-button" id="joinByCodeButton">Join with code</button></div><div class="community-avatars"><span class="tiny-avatar avatar-a">K</span><span class="tiny-avatar avatar-b">M</span><span class="tiny-avatar avatar-c">J</span><span class="tiny-avatar avatar-d">A</span><span class="avatar-count">+2.4k</span><small>players online now</small></div></div>
+        <div class="lobby-panel"><div class="lobby-header"><div><span class="live-dot"></span><b>LIVE LOBBIES</b><small>FIND YOUR PEOPLE</small></div><span class="lobby-refresh">↻ LIVE</span></div><div id="lobbyList"></div><div class="lobby-footer"><span><i></i> Matchmaking is active</span><button id="refreshLobbies">Refresh ↻</button></div></div>
+      </section>
+
+      <section class="bottom-grid" id="profile">
+        <div class="progress-card"><div class="card-heading"><div><div class="eyebrow">YOUR PLAYER FILE</div><h3>Progress, <span>preserved.</span></h3></div><button class="tiny-link" id="openProfile">View profile ↗</button></div><div class="player-progress-row"><div class="level-badge" id="levelBadge">01</div><div class="level-info"><div class="level-top"><b id="levelName">Rookie explorer</b><span id="xpToNext">0 / 500 XP</span></div><div class="level-track"><span id="levelTrack"></span></div><small id="levelFoot">Earn XP in any world to level up.</small></div></div><div class="achievement-row"><span class="achievement-icon">✦</span><div><b id="achievementTitle">First steps</b><small id="achievementText">Launch your first game to unlock an achievement.</small></div><span class="achievement-lock" id="achievementStatus">LOCKED</span></div></div>
+        <div class="quick-card"><div class="eyebrow">QUICK ACCESS</div><h3>Pick up where<br/>you <span>left off.</span></h3><div class="quick-game" id="quickGame"><div class="quick-cover cover-rift"></div><div><b>Riftbound</b><small id="quickGameMeta">No session yet · Start something new</small></div><button class="quick-play" data-launch="riftbound" aria-label="Continue game">▶</button></div><button class="quick-signin" id="quickAccountAction">Create an account <span>→</span></button><p class="quick-note">Your saves stay in this browser in the demo.</p></div>
+      </section>
+
+      <footer class="footer"><a class="brand footer-brand" href="#home"><span class="brand-mark"><span></span><span></span><span></span></span><span class="brand-name">NEXUS<span class="brand-dot">.</span></span></a><span>PLAY MORE. WAIT LESS.</span><span>© 2026 NEXUS CLOUD GAMING <i>·</i> DEMO EXPERIENCE</span></footer>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" id="modalContent"><button class="modal-close" id="modalClose" aria-label="Close">×</button><div id="modalBody"></div></section>
+  </div>
+  <div class="toast-stack" id="toastStack" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
